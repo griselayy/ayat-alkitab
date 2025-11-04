@@ -16,17 +16,31 @@
     <h1>Ayat untukmu hari ini</h1>
     <blockquote id="text" style="font-size:1.25rem; margin:1rem 0"></blockquote>
     <div id="ref" style="font-weight:600"></div>
-    <p><button id="again">Dapatkan ayat lain</button></p>
-    <small>Versi & pilihan ayat ditentukan panitia.</small>
   </div>
 
   <script>
     // === EDIT DI SINI: daftar ayat pilihanmu ===
     // Format bebas. Kamu bisa isi text terjemahan favoritmu (mis. TB/BIS/NIV), plus referensinya.
     const VERSES = [
-      { ref: "Yeremia 29:11 (TB)", text: "Sebab Aku ini mengetahui rancangan-rancangan..." },
-      { ref: "Mazmur 23:1 (TB)", text: "TUHAN adalah gembalaku, takkan kekurangan aku." },
-      { ref: "Filipi 4:13 (TB)", text: "Segala perkara dapat kutanggung di dalam Dia..." },
+      { ref: "Yeremia 29:11 (TB)", text: "Sebab Aku ini mengetahui rancangan-rancangan apa yang ada pada-Ku mengenai kamu, demikianlah firman TUHAN, yaitu rancangan damai sejahtera dan bukan rancangan kecelakaan, untuk memberikan kepadamu hari depan yang penuh harapan." },
+      { ref: "Mazmur 23:1 (TB)", text: "Tuhan adalah gembalaku, takkan kekurangan aku." },
+      { ref: "Filipi 4:13 (TB)", text: "Segala perkara dapat kutanggung di dalam Dia yang memberi kekuatan kepadaku." },
+      { ref: "1 Petrus 5:2 (TB)", text: "Gembalakanlah kawanan domba Allah yang ada padamu, jangan dengan paksa, tetapi dengan sukarela sesuai dengan kehendak Allah, dan jangan karena mau mencari keuntungan, tetapi dengan pengabdian diri." },
+      { ref: "Markus 10:45 (TB)", text: "Karena Anak Manusia juga datang bukan untuk dilayani, melainkan untuk melayani dan untuk memberikan nyawa-Nya menjadi tebusan bagi banyak orang." },
+      { ref: "1 Petrus 2:9 (TB)", text: "Tetapi kamulah bangsa yang terpilih, imamat yang rajani, bangsa yang kudus, umat kepunyaan Allah sendiri, supaya kamu memberitakan perbuatan-perbuatan yang besar dari Dia, yang telah memanggil kamu keluar dari kegelapan kepada terang-Nya yang ajaib." },
+      { ref: "Matius 16:19 (TB)", text: "Kepadamu akan Kuberikan kunci Kerajaan Sorga. Apa yang kauikat di dunia ini akan terikat di sorga dan apa yang kaulepaskan di dunia ini akan terlepas di sorga." },
+      { ref: "Markus 16:17 (TB)", text: "Tanda-tanda ini akan menyertai orang-orang yang percaya: mereka akan mengusir setan-setan demi nama-Ku, mereka akan berbicara dalam bahasa-bahasa yang baru bagi mereka." },
+      { ref: "Mazmur 91:7 (TB)", text: "Walau seribu orang rebah di sisimu, dan sepuluh ribu di sebelah kananmu, tetapi itu tidak akan menimpamu." },
+      { ref: "Yosua 1:9 (TB)", text: "Bukankah telah Kuperintahkan kepadamu: kuatkan dan teguhkanlah hatimu? Janganlah kecut dan tawar hati, sebab TUHAN, Allahmu, menyertai engkau, ke mana pun engkau pergi." },
+      { ref: "Yohanes 14:14 (TB)", text: "Jika kamu meminta sesuatu kepada-Ku dalam nama-Ku, Aku akan melakukannya." },
+      { ref: "Matius 17:20 (TB)", text: "Sebab Aku berkata kepadamu: Sesungguhnya sekiranya kamu mempunyai iman sebesar biji sesawi saja kamu dapat berkata kepada gunung ini: Pindah dari tempat ini ke sana, – maka gunung ini akan pindah, dan takkan ada yang mustahil bagimu." },
+      { ref: "Galatia 5:13 (TB)", text: "Saudara-saudara, memang kamu telah dipanggil untuk merdeka. Tetapi janganlah kamu mempergunakan kemerdekaan itu sebagai kesempatan untuk kehidupan dalam dosa, melainkan layanilah seorang akan yang lain oleh kasih." },
+      { ref: "Kisah Para Rasul 1:8 (TB)", text: "Tetapi kamu akan menerima kuasa, kalau Roh Kudus turun ke atas kamu, dan kamu akan menjadi saksi-Ku di Yerusalem dan di seluruh Yudea dan Samaria dan sampai ke ujung bumi." },
+      { ref: "Ibrani 10:25 (TB)", text: "Janganlah kita menjauhkan diri dari pertemuan-pertemuan ibadah kita, seperti dibiasakan oleh beberapa orang, tetapi marilah kita saling menasihati, dan semakin giat melakukannya menjelang hari Tuhan yang mendekat." },
+      { ref: "2 Korintus 12:9 (TB)", text: "Tetapi jawab Tuhan kepadaku: 'Cukuplah kasih karunia-Ku bagimu, sebab justru dalam kelemahanlah kuasa-Ku menjadi sempurna.' Sebab itu terlebih suka aku bermegah atas kelemahanku, supaya kuasa Kristus turun menaungi aku." },
+      { ref: "Keluaran 4:12 (TB)", text: "Oleh sebab itu, pergilah, Aku akan menyertai lidahmu dan mengajar engkau, apa yang harus kaukatakan." },
+      { ref: "Yesaya 6:8 (TB)", text: "Lalu aku mendengar suara Tuhan berkata: 'Siapakah yang akan Kuutus, dan siapakah yang mau pergi untuk Aku?' Maka sahutku: 'Ini aku, utuslah aku!'" },
+      { ref: "Kolose 3:23 (TB)", text: "Apa pun juga yang kamu perbuat, perbuatlah dengan segenap hatimu seperti untuk Tuhan dan bukan untuk manusia." },
       // Tambahkan ayat-ayat pilihanmu di sini...
     ];
 
