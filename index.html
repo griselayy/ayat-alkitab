@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayat Acak untuk Tamu</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.6 }
+    .card { max-width: 600px; margin:auto; padding: 1.5rem; border: 1px solid #ddd; border-radius: 12px }
+    button { padding: .6rem 1rem; border-radius: 10px; border: 1px solid #ccc; cursor: pointer }
+    small { color: #666 }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Ayat untukmu hari ini</h1>
+    <blockquote id="text" style="font-size:1.25rem; margin:1rem 0"></blockquote>
+    <div id="ref" style="font-weight:600"></div>
+    <p><button id="again">Dapatkan ayat lain</button></p>
+    <small>Versi & pilihan ayat ditentukan panitia.</small>
+  </div>
+
+  <script>
+    // === EDIT DI SINI: daftar ayat pilihanmu ===
+    // Format bebas. Kamu bisa isi text terjemahan favoritmu (mis. TB/BIS/NIV), plus referensinya.
+    const VERSES = [
+      { ref: "Yeremia 29:11 (TB)", text: "Sebab Aku ini mengetahui rancangan-rancangan..." },
+      { ref: "Mazmur 23:1 (TB)", text: "TUHAN adalah gembalaku, takkan kekurangan aku." },
+      { ref: "Filipi 4:13 (TB)", text: "Segala perkara dapat kutanggung di dalam Dia..." },
+      // Tambahkan ayat-ayat pilihanmu di sini...
+    ];
+
+    function pickRandom() {
+      const v = VERSES[Math.floor(Math.random()*VERSES.length)];
+      document.getElementById('text').textContent = v.text;
+      document.getElementById('ref').textContent = v.ref;
+      // opsional: UTM sederhana untuk hitung “batch” tamu yang scan
+      if (window.location.search.includes("r=")) history.replaceState({}, "", location.pathname);
+    }
+    document.getElementById('again').addEventListener('click', pickRandom);
+    pickRandom();
+  </script>
+</body>
+</html>
